@@ -1,0 +1,77 @@
+/*色调变量*/
+:root {
+    --baseColor: #111;
+    --brandColor: green;
+    --bgColor: #eee;
+}
+:root.light {
+    --baseColor: #444;
+    --bgColor: white;
+    --brandColor: #222;
+}
+:root.dark {
+    --baseColor: white;
+    --brandColor: #eee;
+    --bgColor: black;
+}
+
+html,
+body {
+    background-color: #eee;
+    background-color: var(--bgColor);
+    color: #111;
+    color: var(--baseColor);
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.4;
+}
+
+/*清除内外边距*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    color: #111;
+    color: var(--baseColor);
+}
+
+h1 {
+    font-weight: normal;
+    color: green;
+    color: var(--brandColor);
+}
+
+/*flex布局*/
+.mm-flex-h{
+    display: flex;
+}
+.mm-flex-v{
+    display: flex;
+    flex-direction: column;
+}
+.mm-flex-fix{
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.mm-flex-auto{
+    flex:auto;
+}
+.mm-scroll-x{
+    overflow-x: scroll;
+}
+.mm-scroll-y{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
